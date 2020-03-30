@@ -4,12 +4,13 @@ import java.io.Serializable;
 
 public class StandardError implements Serializable {
 	
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // Id criado ao ser inicialiizado o Serializable da classe
 	
 	private Integer status;
 	private String msg;
 	private Long timeStamp;
 	
+	//Métodos e construtores
 	public StandardError(Integer status, String msg, Long timeStamp) {
 		super();
 		this.status = status;
@@ -17,6 +18,7 @@ public class StandardError implements Serializable {
 		this.timeStamp = timeStamp;
 	}
 
+	//Getters e Setters
 	public Integer getStatus() {
 		return status;
 	}

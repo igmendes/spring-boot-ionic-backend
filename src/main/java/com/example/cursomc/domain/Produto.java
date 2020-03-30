@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 public class Produto implements Serializable{
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // Id criado ao ser inicialiizado o Serializable da classe
 	
 	@Id //Indicação de chave primaria
  	@GeneratedValue(strategy=GenerationType.IDENTITY)
