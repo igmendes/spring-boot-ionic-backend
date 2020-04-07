@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Endereco implements Serializable{
@@ -20,7 +20,7 @@ public class Endereco implements Serializable{
 	private Integer id;
 	private String logradouro, numero, complemento, bairro, cep;
 	
-	@JsonBackReference
+	@JsonIgnore
 	@ManyToOne //Relacionamento muitos para um
 	@JoinColumn(name="cliente_id") // Nome da coluna a ser criada no banco de dados pelo JPA
 	private Cliente cliente;
